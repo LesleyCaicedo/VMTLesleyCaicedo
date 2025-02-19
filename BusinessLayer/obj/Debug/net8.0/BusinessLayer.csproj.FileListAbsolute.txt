@@ -10,6 +10,7 @@ C:\APIs\VMT-LesleyCaicedo\BusinessLayer\obj\Debug\net8.0\BusinessLayer.Generated
 C:\APIs\VMT-LesleyCaicedo\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfoInputs.cache
 C:\APIs\VMT-LesleyCaicedo\BusinessLayer\obj\Debug\net8.0\BusinessLayer.AssemblyInfo.cs
 C:\APIs\VMT-LesleyCaicedo\BusinessLayer\obj\Debug\net8.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\APIs\VMT-LesleyCaicedo\BusinessLayer\obj\Debug\net8.0\BusinessLayer.sourcelink.json
 C:\APIs\VMT-LesleyCaicedo\BusinessLayer\obj\Debug\net8.0\Business.EA331CBA.Up2Date
 C:\APIs\VMT-LesleyCaicedo\BusinessLayer\obj\Debug\net8.0\BusinessLayer.dll
 C:\APIs\VMT-LesleyCaicedo\BusinessLayer\obj\Debug\net8.0\refint\BusinessLayer.dll

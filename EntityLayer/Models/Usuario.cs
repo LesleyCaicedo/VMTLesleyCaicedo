@@ -23,7 +23,7 @@ public partial class Usuario
 
     public DateTime? Datespproval { get; set; }
 
-    public string? UserstatusStatusid { get; set; }
+    public int? UserstatusStatusid { get; set; }
 
     public virtual Rol? RolRol { get; set; }
 

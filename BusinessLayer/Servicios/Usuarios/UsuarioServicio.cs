@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DataLayer.Repositorio.Usuarios;
+using EntityLayer.DTO;
+using EntityLayer.Responses;
 
 namespace BusinessLayer.Servicios.Usuarios
 {
-    public class UsuarioServicio
+    public class UsuarioServicio : IUsuarioServicio
     {
+        private readonly IUsuarioRepositorio _usuarioRepositorio;
+
+        Response response = new Response();
+
+        public UsuarioServicio(IUsuarioRepositorio repositorio)
+        {
+            _usuarioRepositorio = repositorio;
+        }
+
+        public async Task<Response> RegistroUsuario(UsuarioDTO usuarioDTO)
+        {
+            response = await _usuarioRepositorio.RegistroUsuario(usuarioDTO);
+            return response;
+        }
     }
 }

@@ -1,0 +1,96 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "VMT-LesleyCaicedo",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Usuario/RegistroUsuario": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "UsuarioDTO": {
+        "type": "object",
+        "properties": {
+          "userid": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "rolRolid": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "creationdate": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "usercreate": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "userapproval": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "datespproval": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "userstatusStatusid": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

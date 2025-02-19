@@ -160,6 +160,7 @@ C:\APIs\VMT-LesleyCaicedo\VMT-LesleyCaicedo\obj\Debug\net8.0\VMT-LesleyCaicedo.A
 C:\APIs\VMT-LesleyCaicedo\VMT-LesleyCaicedo\obj\Debug\net8.0\VMT-LesleyCaicedo.csproj.CoreCompileInputs.cache
 C:\APIs\VMT-LesleyCaicedo\VMT-LesleyCaicedo\obj\Debug\net8.0\VMT-LesleyCaicedo.MvcApplicationPartsAssemblyInfo.cs
 C:\APIs\VMT-LesleyCaicedo\VMT-LesleyCaicedo\obj\Debug\net8.0\VMT-LesleyCaicedo.MvcApplicationPartsAssemblyInfo.cache
+C:\APIs\VMT-LesleyCaicedo\VMT-LesleyCaicedo\obj\Debug\net8.0\VMT-LesleyCaicedo.sourcelink.json
 C:\APIs\VMT-LesleyCaicedo\VMT-LesleyCaicedo\obj\Debug\net8.0\scopedcss\bundle\VMT-LesleyCaicedo.styles.css
 C:\APIs\VMT-LesleyCaicedo\VMT-LesleyCaicedo\obj\Debug\net8.0\staticwebassets.build.json
 C:\APIs\VMT-LesleyCaicedo\VMT-LesleyCaicedo\obj\Debug\net8.0\staticwebassets.development.json

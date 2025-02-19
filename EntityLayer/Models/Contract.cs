@@ -13,7 +13,7 @@ public partial class Contract
 
     public int? ServiceServiceid { get; set; }
 
-    public string? StatuscontactStatusid { get; set; }
+    public int? StatuscontactStatusid { get; set; }
 
     public int? ClientClientid { get; set; }
 

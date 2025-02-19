@@ -9,6 +9,7 @@ C:\APIs\VMT-LesleyCaicedo\DataLayer\obj\Debug\net8.0\DataLayer.GeneratedMSBuildE
 C:\APIs\VMT-LesleyCaicedo\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfoInputs.cache
 C:\APIs\VMT-LesleyCaicedo\DataLayer\obj\Debug\net8.0\DataLayer.AssemblyInfo.cs
 C:\APIs\VMT-LesleyCaicedo\DataLayer\obj\Debug\net8.0\DataLayer.csproj.CoreCompileInputs.cache
+C:\APIs\VMT-LesleyCaicedo\DataLayer\obj\Debug\net8.0\DataLayer.sourcelink.json
 C:\APIs\VMT-LesleyCaicedo\DataLayer\obj\Debug\net8.0\DataLayer.csproj.Up2Date
 C:\APIs\VMT-LesleyCaicedo\DataLayer\obj\Debug\net8.0\DataLayer.dll
 C:\APIs\VMT-LesleyCaicedo\DataLayer\obj\Debug\net8.0\refint\DataLayer.dll

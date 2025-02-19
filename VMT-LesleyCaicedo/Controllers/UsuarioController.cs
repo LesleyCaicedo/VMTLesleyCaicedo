@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using BusinessLayer.Servicios.Usuarios;
+using EntityLayer.DTO;
+using EntityLayer.Responses;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace VMT_LesleyCaicedo.Controllers
@@ -7,6 +10,26 @@ namespace VMT_LesleyCaicedo.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
+        private readonly IUsuarioServicio _usuarioServicio;
+
+        Response response = new();
+
+        public UsuarioController(IUsuarioServicio servicio)
+        {
+            _usuarioServicio = servicio;
+        }
+
+        [HttpPost("[action]")]
+        public async Task<IActionResult> RegistroUsuario(UsuarioDTO usuarioDTO)
+        {
+            response = await _usuarioServicio.RegistroUsuario(usuarioDTO);
+            if (response.Code == ResponseType.Error)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
+        }
+
 
     }
 }

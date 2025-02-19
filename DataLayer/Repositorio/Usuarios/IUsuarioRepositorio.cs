@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EntityLayer.DTO;
+using EntityLayer.Responses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +10,6 @@ namespace DataLayer.Repositorio.Usuarios
 {
     public interface IUsuarioRepositorio
     {
+        public Task<Response> RegistroUsuario(UsuarioDTO usuarioDTO);
     }
 }
