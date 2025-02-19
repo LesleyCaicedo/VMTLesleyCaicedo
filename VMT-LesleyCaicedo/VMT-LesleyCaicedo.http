@@ -1,0 +1,6 @@
+@VMT_LesleyCaicedo_HostAddress = http://localhost:5178
+
+GET {{VMT_LesleyCaicedo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
