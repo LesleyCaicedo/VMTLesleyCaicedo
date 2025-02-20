@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VMT-LesleyCaicedo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a2766bdb6f3148a87ba41e1186bf60bed3f6cbb5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73ae842e67966b022e6321130d6c3175c830f5f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("VMT-LesleyCaicedo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VMT-LesleyCaicedo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

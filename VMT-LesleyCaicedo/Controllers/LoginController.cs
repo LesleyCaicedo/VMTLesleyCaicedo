@@ -17,7 +17,7 @@ namespace VMT_LesleyCaicedo.Controllers
             _loginServicio = servicio;
         }
 
-        [HttpPost("login")]
+        [HttpGet("login")]
         public async Task<IActionResult> Login(string username, string password)
         {
             try

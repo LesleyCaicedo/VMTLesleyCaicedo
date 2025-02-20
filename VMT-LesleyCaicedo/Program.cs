@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using BusinessLayer.Servicios.Login;
 using DataLayer.Repositorio.Login;
 using EntityLayer.Mappers;
+using EntityLayer.Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -37,6 +38,14 @@ builder.Services.AddScoped<IServiciosRepositorio, ServiciosRepositorio>();
 builder.Services.AddScoped<ILoginServicio, LoginServicio>();
 builder.Services.AddScoped<ILoginRepositorio, LoginRepositorio>();
 
+var policyName = "MyPolicy";
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: policyName, builder =>
+        builder.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader());
+});
 
 var app = builder.Build();
 
@@ -48,6 +57,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors(policyName);
 
 app.UseAuthorization();
 

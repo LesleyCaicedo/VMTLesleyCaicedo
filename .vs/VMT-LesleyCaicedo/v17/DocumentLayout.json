@@ -1,7 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Proyectos\\VMTLesleyCaicedo\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F05345-2578-4D03-B75F-D215CB866693}|VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj|d:\\desarrollo\\backend\\vmtlesleycaicedo\\vmt-lesleycaicedo\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F05345-2578-4D03-B75F-D215CB866693}|VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj|solutionrelative:vmt-lesleycaicedo\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F05345-2578-4D03-B75F-D215CB866693}|VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj|d:\\desarrollo\\backend\\vmtlesleycaicedo\\vmt-lesleycaicedo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8F05345-2578-4D03-B75F-D215CB866693}|VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj|solutionrelative:vmt-lesleycaicedo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{46BAF135-6BA7-408F-805E-63F673063690}|DataLayer\\DataLayer.csproj|d:\\desarrollo\\backend\\vmtlesleycaicedo\\datalayer\\vmtlesleycaicedocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{46BAF135-6BA7-408F-805E-63F673063690}|DataLayer\\DataLayer.csproj|solutionrelative:datalayer\\vmtlesleycaicedocontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8F05345-2578-4D03-B75F-D215CB866693}|VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj|d:\\desarrollo\\backend\\vmtlesleycaicedo\\vmt-lesleycaicedo\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D8F05345-2578-4D03-B75F-D215CB866693}|VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj|solutionrelative:vmt-lesleycaicedo\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +26,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
@@ -24,12 +53,56 @@
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\VMT-LesleyCaicedo\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "VMT-LesleyCaicedo\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\VMT-LesleyCaicedo\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "VMT-LesleyCaicedo\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAUwBMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T06:28:53.758Z",
+              "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\VMT-LesleyCaicedo\\Program.cs",
+              "RelativeDocumentMoniker": "VMT-LesleyCaicedo\\Program.cs",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\VMT-LesleyCaicedo\\Program.cs",
+              "RelativeToolTip": "VMT-LesleyCaicedo\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAADwvy0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T06:26:16.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "VmtlesleyCaicedoContext.cs",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\DataLayer\\VmtlesleyCaicedoContext.cs",
+              "RelativeDocumentMoniker": "DataLayer\\VmtlesleyCaicedoContext.cs",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\DataLayer\\VmtlesleyCaicedoContext.cs",
+              "RelativeToolTip": "DataLayer\\VmtlesleyCaicedoContext.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAswDUAAADMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T06:22:32.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\VMT-LesleyCaicedo\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "VMT-LesleyCaicedo\\appsettings.Development.json",
+              "ToolTip": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\VMT-LesleyCaicedo\\appsettings.Development.json",
+              "RelativeToolTip": "VMT-LesleyCaicedo\\appsettings.Development.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvwkAAAC9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-20T06:22:23.104Z",
+              "EditorCaption": ""
             }
           ]
         }
