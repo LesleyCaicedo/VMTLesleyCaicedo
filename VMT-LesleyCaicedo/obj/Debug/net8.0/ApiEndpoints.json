@@ -1,5 +1,186 @@
 [
   {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ClienteController",
+    "Method": "ActualizarCliente",
+    "RelativePath": "api/Cliente/ActualizarCliente",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ClienteDTO",
+        "Type": "EntityLayer.DTO.ClienteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ClienteController",
+    "Method": "RegistroCliente",
+    "RelativePath": "api/Cliente/RegistroCliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ClienteDTO",
+        "Type": "EntityLayer.DTO.ClienteDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ContratoController",
+    "Method": "ActualizarContrato",
+    "RelativePath": "api/Contrato/ActualizarContrato",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContratoDTO",
+        "Type": "EntityLayer.DTO.ContratoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ContratoController",
+    "Method": "ActualizarContratoEstado",
+    "RelativePath": "api/Contrato/ActualizarContratoEstado",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contratoEstadoDTO",
+        "Type": "EntityLayer.DTO.ContratoEstadoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ContratoController",
+    "Method": "ActualizarFormaPago",
+    "RelativePath": "api/Contrato/ActualizarFormaPago",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "formaPagoDTO",
+        "Type": "EntityLayer.DTO.FormaPagoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ContratoController",
+    "Method": "RegistrarContratoEstado",
+    "RelativePath": "api/Contrato/RegistrarContratoEstado",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contratoEstadoDTO",
+        "Type": "EntityLayer.DTO.ContratoEstadoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ContratoController",
+    "Method": "RegistrarFormaPago",
+    "RelativePath": "api/Contrato/RegistrarFormaPago",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "formaPagoDTO",
+        "Type": "EntityLayer.DTO.FormaPagoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ContratoController",
+    "Method": "RegistroContrato",
+    "RelativePath": "api/Contrato/RegistroContrato",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContratoDTO",
+        "Type": "EntityLayer.DTO.ContratoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ServiciosController",
+    "Method": "ActualizarServicios",
+    "RelativePath": "api/Servicios/ActualizarServicios",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ServiciosDTO",
+        "Type": "EntityLayer.DTO.ServiciosDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ServiciosController",
+    "Method": "RegistroServicios",
+    "RelativePath": "api/Servicios/RegistroServicios",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ServiciosDTO",
+        "Type": "EntityLayer.DTO.ServiciosDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "VMT_LesleyCaicedo.Controllers.UsuarioController",
     "Method": "RegistroUsuario",
     "RelativePath": "api/Usuario/RegistroUsuario",

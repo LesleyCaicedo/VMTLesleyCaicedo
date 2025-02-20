@@ -4795,24 +4795,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\viamatica\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\caice\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\APIs\\VMT-LesleyCaicedo\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "C:\\Proyectos\\VMTLesleyCaicedo\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "C:\\APIs\\VMT-LesleyCaicedo\\DataLayer\\DataLayer.csproj",
-      "packagesPath": "C:\\Users\\viamatica\\.nuget\\packages\\",
-      "outputPath": "C:\\APIs\\VMT-LesleyCaicedo\\DataLayer\\obj\\",
+      "projectPath": "C:\\Proyectos\\VMTLesleyCaicedo\\DataLayer\\DataLayer.csproj",
+      "packagesPath": "C:\\Users\\caice\\.nuget\\packages\\",
+      "outputPath": "C:\\Proyectos\\VMTLesleyCaicedo\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\viamatica\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\caice\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4820,14 +4815,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\APIs\\VMT-LesleyCaicedo\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "C:\\APIs\\VMT-LesleyCaicedo\\EntityLayer\\EntityLayer.csproj"
+            "C:\\Proyectos\\VMTLesleyCaicedo\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\Proyectos\\VMTLesleyCaicedo\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }
@@ -4841,8 +4837,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -4879,7 +4874,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

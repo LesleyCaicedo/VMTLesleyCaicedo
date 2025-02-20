@@ -11,3 +11,16 @@ C:\APIs\VMT-LesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.dll
 C:\APIs\VMT-LesleyCaicedo\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
 C:\APIs\VMT-LesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
 C:\APIs\VMT-LesleyCaicedo\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\bin\Debug\net8.0\EntityLayer.deps.json
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\bin\Debug\net8.0\EntityLayer.dll
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\bin\Debug\net8.0\EntityLayer.pdb
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.AssemblyReference.cache
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfoInputs.cache
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.AssemblyInfo.cs
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.sourcelink.json
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.dll
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\refint\EntityLayer.dll
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\EntityLayer.pdb
+C:\Proyectos\VMTLesleyCaicedo\EntityLayer\obj\Debug\net8.0\ref\EntityLayer.dll

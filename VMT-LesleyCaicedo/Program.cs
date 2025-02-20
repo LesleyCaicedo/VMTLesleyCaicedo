@@ -1,7 +1,17 @@
+using BusinessLayer.Servicios.Cliente;
+using BusinessLayer.Servicios.Contratos;
 using BusinessLayer.Servicios.Usuarios;
+using BusinessLayer.Servicios.Servicios;
 using DataLayer;
+using DataLayer.Repositorio.Cliente;
+using DataLayer.Repositorio.Contratos;
 using DataLayer.Repositorio.Usuarios;
+using DataLayer.Repositorio.Servicios;
 using Microsoft.EntityFrameworkCore;
+using BusinessLayer.Servicios.Login;
+using DataLayer.Repositorio.Login;
+using EntityLayer.Mappers;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +28,14 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
 builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+builder.Services.AddScoped<IClienteServicio, ClienteServicio>();
+builder.Services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
+builder.Services.AddScoped<IContratoServicio, ContratoServicio>();
+builder.Services.AddScoped<IContratoRepositorio, ContratoRepositorio>();
+builder.Services.AddScoped<IServiciosServicio, ServiciosServicio>();
+builder.Services.AddScoped<IServiciosRepositorio, ServiciosRepositorio>();
+builder.Services.AddScoped<ILoginServicio, LoginServicio>();
+builder.Services.AddScoped<ILoginRepositorio, LoginRepositorio>();
 
 
 var app = builder.Build();
