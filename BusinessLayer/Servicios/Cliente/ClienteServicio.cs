@@ -31,5 +31,11 @@ namespace BusinessLayer.Servicios.Cliente
             response = await _clienteRepositorio.ActualizarCliente(clienteDTO);
             return response;
         }
+
+        public async Task<List<ClienteContratoDTO>> ObtenerClienteID(string indentificacion)
+        {
+            List<ClienteContratoDTO> cliente = await _clienteRepositorio.ObtenerClienteID(indentificacion);
+            return cliente;
+        }
     }
 }

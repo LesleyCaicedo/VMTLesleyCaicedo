@@ -17,6 +17,22 @@
   },
   {
     "ContainingType": "VMT_LesleyCaicedo.Controllers.ClienteController",
+    "Method": "ObtenerClienteID",
+    "RelativePath": "api/Cliente/ObtenerClienteID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "indentificacion",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.ClienteController",
     "Method": "RegistroCliente",
     "RelativePath": "api/Cliente/RegistroCliente",
     "HttpMethod": "POST",

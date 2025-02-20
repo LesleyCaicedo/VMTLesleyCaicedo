@@ -21,9 +21,24 @@ public partial class Client
 
     public string? Referenceaddress { get; set; }
 
+    public int? contractid { get; set; }
+
     public virtual ICollection<Attention> Attentions { get; set; } = new List<Attention>();
 
     public virtual ICollection<Contract> Contracts { get; set; } = new List<Contract>();
 
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
+
+    public DateTime? Startdate { get; set; }
+
+    public DateTime? Enddate { get; set; }
+
+    public string? Servicename { get; set; }
+
+    public string? Price { get; set; }
+
+    public string? FormaPago { get; set; }
+
+    public string? EstadoContrato { get; set; }
+
 }

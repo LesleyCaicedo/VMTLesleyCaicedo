@@ -1,6 +1,8 @@
 ﻿using EntityLayer.DTO;
+using EntityLayer.Mappers;
 using EntityLayer.Models;
 using EntityLayer.Responses;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -16,10 +18,12 @@ namespace DataLayer.Repositorio.Cliente
         Response response = new();
 
         private readonly VmtlesleyCaicedoContext _context;
+        private readonly ClienteContratoMapper _mapper;
 
-        public ClienteRepositorio(VmtlesleyCaicedoContext context)
+        public ClienteRepositorio(VmtlesleyCaicedoContext context, ClienteContratoMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
         public async Task<Response> RegistroCliente(ClienteDTO clienteDTO)
@@ -135,6 +139,30 @@ namespace DataLayer.Repositorio.Cliente
         }
 
 
+        public async Task<List<ClienteContratoDTO>> ObtenerClienteID(string identificacion)
+        {
+            try
+            {
+                var clientes = _mapper.ListaClienteToClienteContratoDTO(
+                    await _context.Clients
+                        .FromSqlRaw("EXEC SP_ClienteContrato @Identificacion",
+                                    new SqlParameter("@Identificacion", identificacion))
+                        .AsNoTracking()
+                        .ToListAsync()
+                );
+
+                // Eliminar duplicados por contrato
+                var clientesSinDuplicados = clientes
+                    .DistinctBy(c => new { c.Identification, c.contractid })
+                    .ToList();
+
+                return clientesSinDuplicados;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al ejecutar el procedimiento almacenado", ex);
+            }
+        }
 
     }
 }

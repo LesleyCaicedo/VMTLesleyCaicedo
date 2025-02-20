@@ -1,6 +1,7 @@
 ﻿using EntityLayer.DTO;
 using EntityLayer.Models;
 using EntityLayer.Responses;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,24 @@ namespace DataLayer.Repositorio.Contratos
         {
             try
             {
+                if (contratoDTO.Startdate >= contratoDTO.Enddate )
+                {
+                    return new Response { Code = ResponseType.Error, Message = "La fecha de finalizacion debe ser mayor que la de inicio de contrato" };
+                }
+
+                if (DateTime.Now >= contratoDTO.Enddate)
+                {
+                    contratoDTO.StatuscontactStatusid = 2;
+                }
+                else if(DateTime.Now >= contratoDTO.Startdate)
+                {
+                    contratoDTO.StatuscontactStatusid = 1;
+                }
+                else
+                {
+                    contratoDTO.StatuscontactStatusid = 3;
+                }
+
                 Contract nuevoContrato = new Contract()
                 {
                     Contractid = contratoDTO.Contractid,
@@ -61,12 +80,30 @@ namespace DataLayer.Repositorio.Contratos
             {
                 Contract contrato = await _context.Contracts.FindAsync(contratoDTO.Contractid);
 
+                if (contratoDTO.Startdate >= contratoDTO.Enddate)
+                {
+                    return new Response { Code = ResponseType.Error, Message = "La fecha de finalizacion debe ser mayor que la de inicio de contrato" };
+                }
+
+                 if (DateTime.Now >= contratoDTO.Enddate)
+                {
+                    contratoDTO.StatuscontactStatusid = 2;
+                }
+                else if(DateTime.Now >= contratoDTO.Startdate)
+                {
+                    contratoDTO.StatuscontactStatusid = 1;
+                }
+                else
+                {
+                    contratoDTO.StatuscontactStatusid = 3;
+                }
+
                 contrato.Startdate = contratoDTO.Startdate ?? contrato.Startdate;
                 contrato.Enddate = contratoDTO.Enddate ?? contrato.Enddate;
-                contrato.ServiceServiceid = contratoDTO.ServiceServiceid ?? contrato.ServiceServiceid;
-                contrato.StatuscontactStatusid = contratoDTO.StatuscontactStatusid ?? contrato.StatuscontactStatusid;
-                contrato.ClientClientid = contratoDTO.ClientClientid ?? contrato.ClientClientid;
-                contrato.MethodpaymentMethodpaymentid = contratoDTO.MethodpaymentMethodpaymentid ?? contrato.MethodpaymentMethodpaymentid;
+                contrato.ServiceServiceid = contratoDTO.ServiceServiceid <= 0 ? contrato.ServiceServiceid : contratoDTO.ServiceServiceid;
+                contrato.StatuscontactStatusid = contratoDTO.StatuscontactStatusid <= 0 ? contrato.StatuscontactStatusid : contratoDTO.StatuscontactStatusid;
+                contrato.ClientClientid = contratoDTO.ClientClientid <= 0 ? contrato.ClientClientid : contratoDTO.ClientClientid ;
+                contrato.MethodpaymentMethodpaymentid = contratoDTO.MethodpaymentMethodpaymentid <= 0 ? contrato.MethodpaymentMethodpaymentid : contratoDTO.MethodpaymentMethodpaymentid ;
 
                 await _context.SaveChangesAsync();
 

@@ -15,5 +15,8 @@ namespace EntityLayer.Mappers
         public partial Client ClienteToClienteDTO(ClienteDTO ClienteDTO);
 
         public partial ClienteDTO ClienteToClienteDTO(Client cliente);
+
+        public partial List<Client> ListaClienteToClienteDTO(List<ClienteDTO> clienteDTOs);
+        public partial List<ClienteDTO> ListaClienteToClienteDTO(List<Client> clients);
     }
 }

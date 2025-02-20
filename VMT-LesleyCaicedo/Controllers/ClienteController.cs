@@ -40,5 +40,24 @@ namespace VMT_LesleyCaicedo.Controllers
             }
             return Ok(response);
         }
+
+        [HttpGet("[action]")]
+        public async Task<IActionResult> ObtenerClienteID(string indentificacion)
+        {
+            try
+            {
+                List<ClienteContratoDTO> cliente = await _clienteServicio.ObtenerClienteID(indentificacion);
+
+                if (cliente == null)
+                {
+                    return Unauthorized("No hay contratos vinculados al cliente");
+                }
+                return Ok(cliente);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Error en el servidor: " + ex.Message);
+            }
+        }
     }
 }

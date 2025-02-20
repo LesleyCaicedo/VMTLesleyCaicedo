@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace EntityLayer.DTO
@@ -16,6 +17,7 @@ namespace EntityLayer.DTO
 
         public int? ServiceServiceid { get; set; }
 
+        [JsonIgnore]
         public int? StatuscontactStatusid { get; set; }
 
         public int? ClientClientid { get; set; }

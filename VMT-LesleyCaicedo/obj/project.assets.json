@@ -5238,23 +5238,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\josef\\.nuget\\packages\\": {},
+    "C:\\Users\\viamatica\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj",
+      "projectUniqueName": "C:\\APIs\\VMT-LesleyCaicedo\\VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj",
       "projectName": "VMT-LesleyCaicedo",
-      "projectPath": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj",
-      "packagesPath": "C:\\Users\\josef\\.nuget\\packages\\",
-      "outputPath": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\VMT-LesleyCaicedo\\obj\\",
+      "projectPath": "C:\\APIs\\VMT-LesleyCaicedo\\VMT-LesleyCaicedo\\VMT-LesleyCaicedo.csproj",
+      "packagesPath": "C:\\Users\\viamatica\\.nuget\\packages\\",
+      "outputPath": "C:\\APIs\\VMT-LesleyCaicedo\\VMT-LesleyCaicedo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\josef\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\viamatica\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5269,11 +5269,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\BusinessLayer\\BusinessLayer.csproj": {
-              "projectPath": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\BusinessLayer\\BusinessLayer.csproj"
+            "C:\\APIs\\VMT-LesleyCaicedo\\BusinessLayer\\BusinessLayer.csproj": {
+              "projectPath": "C:\\APIs\\VMT-LesleyCaicedo\\BusinessLayer\\BusinessLayer.csproj"
             },
-            "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\EntityLayer\\EntityLayer.csproj": {
-              "projectPath": "D:\\Desarrollo\\BackEnd\\VMTLesleyCaicedo\\EntityLayer\\EntityLayer.csproj"
+            "C:\\APIs\\VMT-LesleyCaicedo\\EntityLayer\\EntityLayer.csproj": {
+              "projectPath": "C:\\APIs\\VMT-LesleyCaicedo\\EntityLayer\\EntityLayer.csproj"
             }
           }
         }
@@ -5324,7 +5324,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -12,5 +12,6 @@ namespace DataLayer.Repositorio.Cliente
     {
         public Task<Response> RegistroCliente(ClienteDTO clienteDTO);
         public Task<Response> ActualizarCliente(ClienteDTO clienteDTO);
+        public Task<List<ClienteContratoDTO>> ObtenerClienteID(string indentificacion);
     }
 }

@@ -67,6 +67,27 @@
         }
       }
     },
+    "/api/Cliente/ObtenerClienteID": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "parameters": [
+          {
+            "name": "indentificacion",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Contrato/RegistroContrato": {
       "post": {
         "tags": [
@@ -433,11 +454,6 @@
             "nullable": true
           },
           "serviceServiceid": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "statuscontactStatusid": {
             "type": "integer",
             "format": "int32",
             "nullable": true
