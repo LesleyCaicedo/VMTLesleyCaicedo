@@ -1,4 +1,5 @@
-﻿using EntityLayer.DTO;
+﻿using DataLayer.Helper;
+using EntityLayer.DTO;
 using EntityLayer.Models;
 using EntityLayer.Responses;
 using Microsoft.EntityFrameworkCore;
@@ -16,12 +17,12 @@ namespace DataLayer.Repositorio.Usuarios
         {
             _context = context;
         }
+        //string contraseña = PasswordGenerator.GenerarContraseña(12);
 
         public async Task<Response> RegistroUsuario(UsuarioDTO usuarioDTO)
         {
             try
             {
-                // Validar el nombre de usuario
                 if (usuarioDTO.Username.Length < 8 || usuarioDTO.Username.Length > 20)
                 {
                     response.Code = ResponseType.Error;
@@ -43,7 +44,6 @@ namespace DataLayer.Repositorio.Usuarios
                     return response;
                 }
 
-                // Verificar si el nombre de usuario ya existe en la base de datos
                 var usuarioExistente = await _context.Usuarios
                     .FirstOrDefaultAsync(u => u.Username == usuarioDTO.Username);
                 if (usuarioExistente != null)
@@ -53,28 +53,27 @@ namespace DataLayer.Repositorio.Usuarios
                     return response;
                 }
 
-                // Validar la contraseña
-                if (usuarioDTO.Password.Length < 8 || usuarioDTO.Password.Length > 30)
-                {
-                    response.Code = ResponseType.Error;
-                    response.Message = "La contraseña debe tener entre 8 y 30 caracteres.";
-                    return response;
-                }
+                //// Validar la contraseña
+                //if (usuarioDTO.Password.Length < 8 || usuarioDTO.Password.Length > 30)
+                //{
+                //    response.Code = ResponseType.Error;
+                //    response.Message = "La contraseña debe tener entre 8 y 30 caracteres.";
+                //    return response;
+                //}
 
-                if (!usuarioDTO.Password.Any(char.IsUpper) || !usuarioDTO.Password.Any(char.IsDigit))
-                {
-                    response.Code = ResponseType.Error;
-                    response.Message = "La contraseña debe contener al menos una letra mayúscula y un número.";
-                    return response;
-                }
+                //if (!usuarioDTO.Password.Any(char.IsUpper) || !usuarioDTO.Password.Any(char.IsDigit))
+                //{
+                //    response.Code = ResponseType.Error;
+                //    response.Message = "La contraseña debe contener al menos una letra mayúscula y un número.";
+                //    return response;
+                //}
 
-                // Crear el nuevo usuario
                 Usuario nuevoUsuario = new Usuario()
                 {
                     Userid = usuarioDTO.Userid,
                     Username = usuarioDTO.Username,
                     Email = usuarioDTO.Email,
-                    Password = usuarioDTO.Password,
+                    Password = CuentaHelper.GenerarContraseña(),
                     RolRolid = usuarioDTO.RolRolid,
                     Creationdate = usuarioDTO.Creationdate,
                     Usercreate = usuarioDTO.Usercreate,

@@ -34,6 +34,7 @@ namespace DataLayer.Repositorio.Login
                     .AsEnumerable() 
                     .Select(u => new Usuario
                     {
+                        Userid = u.Userid,
                         Username = u.Username,
                         Email = u.Email,
                         RolRolid = u.RolRolid
