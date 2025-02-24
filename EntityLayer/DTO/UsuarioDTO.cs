@@ -29,4 +29,22 @@ namespace EntityLayer.DTO
 
         public int? UserstatusStatusid { get; set; }
     }
+
+    public class TablaUsuarioDTO
+    {
+        public int Id { get; set; }
+
+        public string? Username { get; set; }
+
+        public string? Email { get; set; }
+
+        public string? Rol { get; set; }
+
+        public int? UserstatusStatus { get; set; }
+
+        public DateTime? Creationdate { get; set; }
+
+        public int? Usercreate { get; set; }
+    }
+
 }

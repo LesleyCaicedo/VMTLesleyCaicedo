@@ -11,5 +11,6 @@ namespace BusinessLayer.Servicios.Usuarios
     public interface IUsuarioServicio
     {
         public Task<Response> RegistroUsuario(UsuarioDTO usuarioDTO);
+        public Task<Response> ObtenerUsuarios();
     }
 }

@@ -13,7 +13,8 @@ namespace EntityLayer.Mappers
     public partial class UsuarioMapper
     {
         public partial Usuario UsuarioToUsuarioDTO(UsuarioDTO usuarioDTO);
-
         public partial UsuarioDTO UsuarioToUsuarioDTO(Usuario usuario);
+        public partial List<UsuarioDTO> UsuariosToUsuariosDTO(List<Usuario> usuarios);
+
     }
 }

@@ -198,6 +198,16 @@
   },
   {
     "ContainingType": "VMT_LesleyCaicedo.Controllers.UsuarioController",
+    "Method": "ObtenerUsuario",
+    "RelativePath": "api/Usuario/ObtenerUsuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.UsuarioController",
     "Method": "RegistroUsuario",
     "RelativePath": "api/Usuario/RegistroUsuario",
     "HttpMethod": "POST",

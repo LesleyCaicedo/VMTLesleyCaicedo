@@ -30,6 +30,16 @@ namespace VMT_LesleyCaicedo.Controllers
             return Ok(response);
         }
 
+        [HttpGet("[action]")]
+        public async Task<IActionResult> ObtenerUsuario()
+        {
+            response = await _usuarioServicio.ObtenerUsuarios();
+            if (response.Code == ResponseType.Error)
+            {
+                return BadRequest(response);
+            }
+            return Ok(response);
+        }
 
     }
 }

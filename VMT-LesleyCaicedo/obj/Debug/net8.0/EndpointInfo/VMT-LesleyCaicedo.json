@@ -394,6 +394,18 @@
           }
         }
       }
+    },
+    "/api/Usuario/ObtenerUsuario": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

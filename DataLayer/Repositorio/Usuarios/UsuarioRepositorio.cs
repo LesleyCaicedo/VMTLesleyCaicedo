@@ -1,5 +1,6 @@
 ﻿using DataLayer.Helper;
 using EntityLayer.DTO;
+using EntityLayer.Mappers;
 using EntityLayer.Models;
 using EntityLayer.Responses;
 using Microsoft.EntityFrameworkCore;
@@ -12,12 +13,13 @@ namespace DataLayer.Repositorio.Usuarios
         Response response = new();
 
         private readonly VmtlesleyCaicedoContext _context;
+        private readonly UsuarioMapper _mapperUser = new();
+        private readonly RolMapper _mapperRol = new();
 
         public UsuarioRepositorio(VmtlesleyCaicedoContext context)
         {
             _context = context;
         }
-        //string contraseña = PasswordGenerator.GenerarContraseña(12);
 
         public async Task<Response> RegistroUsuario(UsuarioDTO usuarioDTO)
         {
@@ -101,7 +103,45 @@ namespace DataLayer.Repositorio.Usuarios
             }
         }
 
+        public async Task<Response> ObtenerUsuarios()
+        {
+            try
+            {
+                List<UsuarioDTO> usuarios = _mapperUser.UsuariosToUsuariosDTO(await _context.Usuarios.ToListAsync());
+                List<RolDTO> roles = _mapperRol.RolesToRolesDTO(await _context.Rols.ToListAsync());
 
+                var usuariosConRol = from usuario in usuarios
+                                     join rol in roles
+                                     on usuario.RolRolid equals rol.Rolid into rolJoin
+                                     from rol in rolJoin.DefaultIfEmpty()
 
+                                     join creador in usuarios
+                                     on usuario.Usercreate equals creador.Userid into creadorJoin
+                                     from creador in creadorJoin.DefaultIfEmpty()
+
+                                     select new
+                                     {
+                                         usuario.Userid,
+                                         usuario.Username,
+                                         usuario.Email,
+                                         usuario.UserstatusStatusid,
+                                         RolNombre = rol != null ? rol.Rolname : "Sin rol asignado",
+                                         CreadorNombre = creador != null ? creador.Username : "Sistema" // Si no hay creador
+                                     };
+
+                // Devolver respuesta exitosa
+                response.Code = ResponseType.Success;
+                response.Message = "Usuarios con roles encontrados";
+                response.Data = usuariosConRol.ToList();
+
+            }
+            catch (Exception ex)
+            {
+                response.Code = ResponseType.Error;
+                response.Message = "Error al registrar usuario";
+                response.Data = ex.Message;
+            }
+            return response;
+        }
     }
 }
