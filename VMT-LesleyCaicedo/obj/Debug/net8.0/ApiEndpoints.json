@@ -198,6 +198,22 @@
   },
   {
     "ContainingType": "VMT_LesleyCaicedo.Controllers.UsuarioController",
+    "Method": "ActualizarUsuario",
+    "RelativePath": "api/Usuario/ActualizarUsuario",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioDTO",
+        "Type": "EntityLayer.DTO.UsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "VMT_LesleyCaicedo.Controllers.UsuarioController",
     "Method": "ObtenerUsuario",
     "RelativePath": "api/Usuario/ObtenerUsuario",
     "HttpMethod": "GET",

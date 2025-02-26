@@ -26,5 +26,11 @@ namespace BusinessLayer.Servicios.Usuarios
             response = await _usuarioRepositorio.ObtenerUsuarios();
             return response;
         }
+
+        public async Task<Response> ActualizarUsuario(UsuarioDTO usuarioDTO)
+        {
+            response = await _usuarioRepositorio.ActualizarUsuario(usuarioDTO);
+            return response;
+        }
     }
 }

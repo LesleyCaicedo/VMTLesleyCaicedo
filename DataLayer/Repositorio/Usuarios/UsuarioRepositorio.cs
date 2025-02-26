@@ -4,6 +4,7 @@ using EntityLayer.Mappers;
 using EntityLayer.Models;
 using EntityLayer.Responses;
 using Microsoft.EntityFrameworkCore;
+using System.Text.RegularExpressions;
 
 
 namespace DataLayer.Repositorio.Usuarios
@@ -54,21 +55,6 @@ namespace DataLayer.Repositorio.Usuarios
                     response.Message = "El nombre de usuario ya está registrado.";
                     return response;
                 }
-
-                //// Validar la contraseña
-                //if (usuarioDTO.Password.Length < 8 || usuarioDTO.Password.Length > 30)
-                //{
-                //    response.Code = ResponseType.Error;
-                //    response.Message = "La contraseña debe tener entre 8 y 30 caracteres.";
-                //    return response;
-                //}
-
-                //if (!usuarioDTO.Password.Any(char.IsUpper) || !usuarioDTO.Password.Any(char.IsDigit))
-                //{
-                //    response.Code = ResponseType.Error;
-                //    response.Message = "La contraseña debe contener al menos una letra mayúscula y un número.";
-                //    return response;
-                //}
 
                 Usuario nuevoUsuario = new Usuario()
                 {
@@ -142,6 +128,64 @@ namespace DataLayer.Repositorio.Usuarios
                 response.Data = ex.Message;
             }
             return response;
+        }
+    
+        public async Task<Response> ActualizarUsuario(UsuarioDTO usuarioDTO)
+        {
+            try
+            {
+                Usuario usuario = await _context.Usuarios.FindAsync(usuarioDTO.Userid);
+
+                bool usuarioExistente = await _context.Usuarios
+                  .AnyAsync(u => u.Username == usuarioDTO.Username && u.Userid != usuarioDTO.Userid);
+
+                if (usuarioExistente)
+                {
+                    return new Response { Code = ResponseType.Error, Message = "El nombre de usuario ya está registrado." };
+                }
+
+                if (usuarioDTO.Username.Length < 8 || usuarioDTO.Username.Length > 20)
+                {
+                    return new Response { Code = ResponseType.Error, Message = "El nombre de usuario debe tener entre 8 y 20 caracteres."};
+                }
+
+                if (!usuarioDTO.Username.Any(char.IsLetter) || !usuarioDTO.Username.Any(char.IsDigit))
+                {
+                    return new Response { Code = ResponseType.Error, Message = "El nombre de usuario debe tener letras y al menos un número." };
+                }
+
+                if (usuarioDTO.Username.Any(ch => !char.IsLetterOrDigit(ch)))
+                {
+                    return new Response { Code = ResponseType.Error, Message = "El nombre de usuario no debe contener caracteres especiales." };
+                }
+
+                if (usuarioDTO.Password.Length < 8 || usuarioDTO.Password.Length > 30)
+                {
+                    return new Response { Code = ResponseType.Error, Message = "La contraseña debe tener entre 8 y 30 caracteres." };
+                }
+
+                if (!usuarioDTO.Password.Any(char.IsUpper) || !usuarioDTO.Password.Any(char.IsDigit))
+                {
+                    return new Response { Code = ResponseType.Error, Message = "La contraseña debe contener al menos una letra mayúscula y un número." };
+                }
+
+                usuario.Username = usuarioDTO.Username;
+                usuario.Password = usuarioDTO.Password;
+                usuario.Email = usuarioDTO.Email;
+                usuario.RolRolid = usuarioDTO.RolRolid;
+                usuario.Creationdate = usuarioDTO.Creationdate;
+                usuario.Usercreate = usuarioDTO.Usercreate;
+                usuario.Userapproval = usuarioDTO.Userapproval;
+                usuario.Datespproval = usuarioDTO.Datespproval;
+                usuario.UserstatusStatusid = usuarioDTO.UserstatusStatusid;
+
+                await _context.SaveChangesAsync();
+                return new Response { Code = ResponseType.Success, Message = "usuario actualizado correctamente", Data = usuarioDTO };
+            }
+            catch (Exception ex)
+            {
+                return new Response { Code = ResponseType.Error, Message = "No se pudo actualizar", Data = ex.Message };
+            }
         }
     }
 }

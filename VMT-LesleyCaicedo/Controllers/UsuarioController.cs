@@ -41,5 +41,15 @@ namespace VMT_LesleyCaicedo.Controllers
             return Ok(response);
         }
 
+        [HttpPut("[action]")]
+        public async Task<IActionResult> ActualizarUsuario(UsuarioDTO usuarioDTO)
+        {
+            response = await _usuarioServicio.ActualizarUsuario(usuarioDTO);
+            if (response.Code == ResponseType.Error) 
+            { 
+                return BadRequest(response); 
+            }
+            return Ok(response);
+        }
     }
 }

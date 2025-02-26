@@ -12,5 +12,6 @@ namespace DataLayer.Repositorio.Usuarios
     {
         public Task<Response> RegistroUsuario(UsuarioDTO usuarioDTO);
         public Task<Response> ObtenerUsuarios();
+        public Task<Response> ActualizarUsuario(UsuarioDTO usuarioDTO);
     }
 }
